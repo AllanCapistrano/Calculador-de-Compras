@@ -7,7 +7,7 @@
 <body>
     <?php
         $num = 0;
-        $qtd_pessoas = isset($_GET["qtd-pessoas"])?$_GET["qtd-pessoas"]:0;
+        $qtd_pessoas = isset($_POST["qtd-pessoas"])?$_POST["qtd-pessoas"]:0;
         while($num < $qtd_pessoas){
             echo "<form id='preco-qtd$num'>";
                 echo "<p>Preço: R$ <input class='preco' type='number' style= 'width: 80px' placeholder='Ex: 10,50' min='0'>";
