@@ -18,7 +18,7 @@ function addItens(num){
     qtd_element[num].value = 1;
 }
 
-function calcTotal(tt){
+function calcTotal(){
     let tot = 0;
 
     valores.forEach((value) => {
