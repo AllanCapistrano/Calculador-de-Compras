@@ -9,8 +9,8 @@
         $num = 0;
         $qtd_pessoas = isset($_POST["qtd-pessoas"])?$_POST["qtd-pessoas"]:0;
         while($num < $qtd_pessoas){
-            echo "<form id='preco-qtd$num'>";
-                echo "<p>Preço: R$ <input class='preco' type='number' style= 'width: 80px' placeholder='Ex: 10,50' min='0'>";
+            echo "<form id='preco-qtd$num' onsubmit='return false'>";
+                echo "<p>Preço: R$ <input class='preco' type='number' style= 'width: 80px' placeholder='Ex: 10,50' min='0' onkeypress='addItensByEnter(event, $num)'>";
                 echo " Quantidade: <select name='qtd-itens' class='iqtd-itens'>";
                     echo "<option value='1' selected>1</option>";
                     for($i=2; $i <=10; $i++){

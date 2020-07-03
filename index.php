@@ -8,7 +8,7 @@
 <body>
     <h1>Calculador de compras</h1>
     <div id="interface">
-        <form method="POST" action="./src/form.php">
+        <form method="POST" action="./src/form.php" onsubmit="return false">
             <section>
                 <h3>Fez compras para quantas pessoas?</h3>
                 <select name="qtd-pessoas" id="iqtd-pessoas" onchange="this.form.submit()">

@@ -8,14 +8,21 @@ let valores = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 function addItens(num){
     if((preco_element[num].value) != 0){
         valores[num] += (Number(preco_element[num].value) * Number(qtd_element[num].value));
-        text[num].innerHTML = '<strong>R$ ' + valores[num] + '</strong>';
+        text[num].innerHTML = '<strong> ' + valores[num].toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'BRL'}) + '</strong>';
     }else{
         valores[num] = 0;
         text[num].innerHTML = '';
+        total.innerHTML = '';
     }
 
     preco_element[num].value = '';
     qtd_element[num].value = 1;
+}
+
+function addItensByEnter(event, num){
+    if(event.keyCode == 13){
+        addItens(num)
+    }
 }
 
 function calcTotal(){
@@ -29,7 +36,9 @@ function calcTotal(){
         total.innerHTML = '';
         window.alert('Adicione os valores antes de calcular o total!');
     }else{
-        total.innerHTML = "<h3>R$ " + tot + "</h3>";
+        total.innerHTML = "<h3>" + tot.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'BRL'}) + "</h3>";
     }
     
 }
+
+
