@@ -28,3 +28,9 @@ footer#rodape p {
     bottom: 0px;
     left: 630px;
 }
+
+textarea#iname-buyer{
+    line-height: 1;
+    border: 1px solid;
+    box-shadow: 1px 1px 1px #999;
+}

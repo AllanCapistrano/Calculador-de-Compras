@@ -2,7 +2,8 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style/estilo.css">
+    <!--<link rel="stylesheet" href="./style/estilo.css">-->
+    <link rel="stylesheet" href="./style/style_index.css">
     <title>Calculador de Compras</title>
 </head>
 <body>
