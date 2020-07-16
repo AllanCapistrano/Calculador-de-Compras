@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="../style/estilo.css">
+    <link rel="stylesheet" href="../style/style.css">
     <title>Calculador de Compras</title>
 </head>
 <body>
@@ -29,7 +29,7 @@
     <p><span id='total'></span></p>
     <p><a href='../index.php' id="back">Voltar</a></p>
 
-    <script src="../scripts/funcoes.js"></script>
+    <script src="../scripts/functions.js"></script>
     <footer id="rodape">
         <p>Copyright &copy; 2020 - by <a href="https://github.com/AllanCapistrano" target="_blank">Allan Capistrano</a></p>
     </footer>

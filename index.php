@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <!--<link rel="stylesheet" href="./style/estilo.css">-->
+    <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/style_index.css">
     <title>Calculador de Compras</title>
 </head>
@@ -22,9 +22,10 @@
                 </select>
             </section>
         </form>
+        <!--<img src="./assets/shopping-cart.png" id="carro-compra">-->
     </div>
 
-    <script src="./scripts/funcoes.js"></script>
+    <script src="./scripts/functions.js"></script>
     <footer id="rodape">
         <p>Copyright &copy; 2020 - by <a href="https://github.com/AllanCapistrano" target="_blank">Allan Capistrano</a></p>
     </footer>
