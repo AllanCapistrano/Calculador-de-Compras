@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/style_index.css">
+    <link rel="stylesheet" href="./style/style_indexPage.css">
     <title>Calculador de Compras</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
                 </select>
             </section>
         </form>
-        <!--<img src="./assets/shopping-cart.png" id="carro-compra">-->
+        <img src="./assets/shopping-cart.png" id="carro-compra">
     </div>
 
     <script src="./scripts/functions.js"></script>

@@ -1,44 +1,72 @@
 let preco_element = document.getElementsByClassName("preco");
 let qtd_element = document.getElementsByClassName("iqtd-itens");
-let text = document.getElementsByClassName("itens");
-let total = document.getElementById("total");
+let name = document.getElementsByClassName("iname-buyer");
+
+let tab = document.getElementById("ivalores");
 
 let valores = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let total = 0;
 
+/*Função que adiciona os itens e soma os valores.*/
 function addItens(num){
     if((preco_element[num].value) != 0){
         valores[num] += (Number(preco_element[num].value) * Number(qtd_element[num].value));
-        text[num].innerHTML = '<strong> ' + valores[num].toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'BRL'}) + '</strong>';
+        showItens(num)
     }else{
         valores[num] = 0;
-        text[num].innerHTML = '';
-        total.innerHTML = '';
+        total = 0;
+        tab.children[num].textContent = '';
     }
 
     preco_element[num].value = '';
     qtd_element[num].value = 1;
 }
 
-function addItensByEnter(event, num){
-    if(event.keyCode == 13){
-        addItens(num)
+/*Função que mostra e formata os valores dos itens.*/
+function showItens(num){
+    if(tab.children[num] != null){
+        tab.children[num].textContent = `${name[num].value}: ${valores[num].toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'BRL'})}`;
+    }else{
+        let item = document.createElement('option');
+        item.text = `${name[num].value}: ${valores[num].toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'BRL'})}`;
+        item.value = `tab${num}`;
+        tab.appendChild(item);
     }
 }
 
-function calcTotal(){
-    let tot = 0;
+/*Função que permite a adição de itens através da tecla "Enter".*/
+function addItensByEnter(event, num){
+    if(event.keyCode == 13){
+        addItens(num);
+    }
+}
 
+/*Função que calcula o valor total.*/
+function calcTotal(num){
     valores.forEach((value) => {
-        tot += value;
+        total += value;
     });
 
-    if(tot == 0){
-        total.innerHTML = '';
+    if(total == 0){
+        tab.children[num].textContent = '';
         window.alert('Adicione os valores antes de calcular o total!');
     }else{
-        total.innerHTML = "<h3>" + tot.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'BRL'}) + "</h3>";
+        showTotal(num);
+        total = 0;
     }
     
 }
 
-
+/*Função que mostra e formata o valor total.*/
+function showTotal(num){
+    console.log(num)
+    if(tab.children[num] != null){
+        tab.children[num].textContent = `Total: ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'BRL'})}`;
+    }else{
+        let item = document.createElement('option');
+        item.text = `Total: ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'BRL'})}`;
+        item.value = `total`;
+        tab.appendChild(item);
+    }
+    /*Colocara para o total ser mostrado na última linha.*/
+}

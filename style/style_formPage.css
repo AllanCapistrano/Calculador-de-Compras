@@ -1,0 +1,34 @@
+div#interface{
+    background-color: #005B6F;
+    position: absolute;
+    width: 1292px;
+    height: 650px;
+    top: 50px;
+    left: 54px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 106px;
+}
+
+h1{
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+form{
+    text-align: center;
+}
+
+input{
+    width: 80px;
+}
+
+button#icalcTotal{
+    margin-left: 590px;
+}
+
+a#back {
+    position: absolute;
+    top: 620px;
+    left: 640px;
+}
