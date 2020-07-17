@@ -1,4 +1,7 @@
 # Calculardor-de-Compras
+<p align="center">
+  <img src="assets/pagina_principal.png">
+<p>
 
 ## Descrição ##
 
