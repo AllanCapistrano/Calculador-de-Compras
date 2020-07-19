@@ -15,7 +15,8 @@ function addItens(num){
     }else{
         valores[num] = 0;
         total = 0;
-        tab.children[num].textContent = '';
+        if(typeof(tab.children[num]) != "undefined")
+            tab.children[num].textContent = '';
     }
 
     preco_element[num].value = '';
