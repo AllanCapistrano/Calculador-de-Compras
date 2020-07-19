@@ -1,7 +1,12 @@
 # Calculardor-de-Compras
 <p align="center">
-  <h4>Página principal</h4>
-  <img src="assets/pagina_principal.png">
+  <h4>Página principal.</h4>
+  <img src="assets/pagina_principal.png" width="750px">
+<p>
+  
+<p align="center">
+  <h4>Página de cálculos (exemplo para 5 pessoas).</h4>
+  <img src="assets/pagina_calculos.png" width="750px">
 <p>
 
 ## Descrição ##
