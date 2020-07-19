@@ -30,6 +30,7 @@ function showItens(num){
     }else{
         let item = document.createElement('option');
         item.text = `${name[num].value}: ${valores[num].toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'BRL'})}`;
+        //item.style.color = '#ffffff';
         item.value = `tab${num}`;
         tab.appendChild(item);
     }
@@ -66,7 +67,8 @@ function showTotal(num){
     }else{
         let item = document.createElement('option');
         item.text = `Total: ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'BRL'})}`;
-        item.value = `total`;
+        item.value = 'total';
+        item.style.color = '#1fa20b';
         tab.appendChild(item);
     }
     /*Colocara para o total ser mostrado na última linha.*/

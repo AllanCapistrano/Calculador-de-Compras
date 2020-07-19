@@ -29,6 +29,7 @@
             echo "<p><button type='button' id='icalcTotal' onclick='calcTotal($num)'>Calcular Total</button></p>";
             $num += 1;
             echo "<select name='valores' id='ivalores' size=$num>";
+            echo "<option>Aqui serão mostrados os valores e o total.</option>";
             echo "</select>";
         ?>
 
