@@ -49,7 +49,8 @@ function calcTotal(num){
     });
 
     if(total == 0){
-        tab.children[num].textContent = '';
+        if(typeof(tab.children[num]) != "undefined")
+            tab.children[num].textContent = '';
         window.alert('Adicione os valores antes de calcular o total!');
     }else{
         showTotal(num);
@@ -60,7 +61,6 @@ function calcTotal(num){
 
 /*Função que mostra e formata o valor total.*/
 function showTotal(num){
-    console.log(num)
     if(tab.children[num] != null){
         tab.children[num].textContent = `Total: ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'BRL'})}`;
     }else{
