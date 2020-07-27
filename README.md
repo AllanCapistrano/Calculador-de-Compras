@@ -1,4 +1,4 @@
-# Calculardor-de-Compras
+# Calculador-de-Compras
 <p align="center">
   <h4>Página principal.</h4>
   <img src="assets/pagina_principal.png" width="750px">
