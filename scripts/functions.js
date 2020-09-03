@@ -30,7 +30,6 @@ function showItens(num){
     }else{
         let item = document.createElement('option');
         item.text = `${name[num].value}: ${valores[num].toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'BRL'})}`;
-        //item.style.color = '#ffffff';
         item.value = `tab${num}`;
         tab.appendChild(item);
     }
