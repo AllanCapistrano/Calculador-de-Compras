@@ -71,5 +71,4 @@ function showTotal(num){
         item.style.color = '#1fa20b';
         tab.appendChild(item);
     }
-    /*Colocara para o total ser mostrado na última linha.*/
 }
