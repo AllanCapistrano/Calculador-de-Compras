@@ -6,12 +6,18 @@ let tab = document.getElementById("ivalores");
 
 let valores = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 let total = 0;
+let teste = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 /*Função que adiciona os itens e soma os valores.*/
 function addItens(num){
     if((preco_element[num].value) != 0){
-        valores[num] += (Number(preco_element[num].value) * Number(qtd_element[num].value));
+      // valores[num] += (Number(preco_element[num].value) * Number(qtd_element[num].value));
+        temp = (Number(preco_element[num].value) * Number(qtd_element[num].value));
+        valores[num] += temp
         showItens(num)
+
+        teste[num] += ` ${temp.toString()}`;
+        console.log(teste[num])
     }else{
         valores[num] = 0;
         total = 0;
@@ -30,7 +36,8 @@ function showItens(num){
     }else{
         let item = document.createElement('option');
         item.text = `${name[num].value}: ${valores[num].toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'BRL'})}`;
-        item.value = `tab${num}`;
+        // item.value = `tab${num}`;
+        item.value = `${num}`;
         tab.appendChild(item);
     }
 }
