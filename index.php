@@ -27,7 +27,7 @@
 
     <script src="./scripts/functions.js"></script>
     <footer id="rodape">
-        <p>Copyright &copy; 2020 - by <a href="https://github.com/AllanCapistrano" target="_blank">Allan Capistrano</a></p>
+      <p>Copyright &copy; 2020 - by <a href="https://github.com/AllanCapistrano" target="_blank">Allan Capistrano</a></p>
     </footer>
 </body>
 </html>
