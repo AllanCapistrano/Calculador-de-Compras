@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./style/style.css">
   <link rel="stylesheet" href="./style/style_indexPage.css">
   <title>Calculador de Compras</title>
 </head>
+
 <body>
   <h1>Calculador de compras</h1>
   <div id="interface">
@@ -15,9 +17,9 @@
         <select name="qtd-pessoas" id="iqtd-pessoas" onchange="this.form.submit()">
           <option value="" selected></option>
           <?php
-            for($i=1; $i <=10; $i++){
-              echo "<option value='$i'>$i</option>";
-            }
+          for ($i = 1; $i <= 10; $i++) {
+            echo "<option value='$i'>$i</option>";
+          }
           ?>
         </select>
       </section>
@@ -30,4 +32,5 @@
     <p>Copyright &copy; 2020 - by <a href="https://github.com/AllanCapistrano" target="_blank">Allan Capistrano</a></p>
   </footer>
 </body>
+
 </html>
